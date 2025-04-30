@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boeing Aircraft Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav 
+        {
+            background-color: #e6e6e6;
+            text-align: center;
+            padding: 1em;
+        }
+        nav a 
+        {
+            color: #003366;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .aircrafts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .aircraft-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.2s;
+        }
+        .aircraft-card:hover {
+            transform: scale(1.05);
+        }
+        .aircraft-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .aircraft-info {
+            padding: 15px;
+        }
+        .aircraft-info h3 {
+            margin: 0 0 10px;
+        }
+        .aircraft-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Boeing Aircraft Showcase</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="boeing.html">Aircrafts</a>
+    <a href="Airlines.html">Airlines</a>
+    <a href="#">Safety</a>
+    <a href="#">Incidents</a>
+    <a href="#">Simulators</a>
+  </nav>
+
+<section class="aircrafts">
+    <!-- Boeing 747 -->
+    <div class="aircraft-card">
+        <img src="img/747.jpg" alt="Boeing 747">
+        <div class="aircraft-info">
+            <h3>Boeing 747</h3>
+            <p><strong>Released:</strong> February 9, 1969</p>
+            <p><strong>Speed:</strong> 540 mph</p>
+            <p><strong>Capacity:</strong> 416–660 passengers</p>
+            <p><strong>Engines (Earlier Models):</strong> JT9D, CF6, or RB211</p>
+            <p><strong>Engines (Latest Models):</strong> GEnx-2B67</p>
+            <p><strong>Facts</strong>  It is called Jumbo Jet or Queen of the Skies. It is a wideboody aircraft designed for mid-to-long range flights.</p>
+            <p><strong>The Boeing 747-200, also called the “Jumbo Jet” or “Queen of the skies”,  was invented on February 9th, 1969, which is now one of the most successful aircrafts, capable of mid and long-range travel. It can carry from 416-660 passengers depending on the model. The early 747 models had 4 JT9D, CF6, or RB211 engines. And the latest (747-8) has 4 GEnx-2B67 engines.</strong></p>
+        </div>
+    </div>
++
+    <!-- Boeing 777 -->
+    <div class="aircraft-card">
+        <img src="img/777.jpg" alt="Boeing 777">
+        <div class="aircraft-info">
+            <h3>Boeing 777</h3>
+            <p><strong>Released:</strong> June 12, 1994</p>
+            <p><strong>Speed:</strong> 560 mph</p>
+            <p><strong>Capacity:</strong> 314–396 passengers</p>
+            <p><strong>Engines:</strong> Three Pratt & Whitney JT8D turbofan </p>
+            <p><strong>Facts:</strong> The Boeing 777 is known for it's efficiency and comfort. It is a widebdy aircraft designed for long-range flights</p>
+            <p><strong>The Boeing 777-200 had finished development in 1995. It is a long-range widebody with twin engines. The 777 has an average cruising speed of around 560 mph and could carry up to 296 passengers. The Boeing 777 is known for its efficiency and passenger comfort. It has Pratt & Whitney PW4000, General Electric GE90, Rolls-Royce Trent 800, and GE9X Engines.</strong></p>
+
+        </div>
+    </div>
+
+    <!-- Boeing 787 Dreamliner -->
+    <div class="aircraft-card">
+        <img src="img/787.jpg" alt="Boeing 787">
+        <div class="aircraft-info">
+            <h3>Boeing 787</h3>
+            <p><strong>Released:</strong> December 15, 2009</p>
+            <p><strong>Speed:</strong> 567 mph</p>
+            <p><strong>Capacity:</strong> 242–330 passengers</p>
+            <p><strong>Engines:</strong> Rolls-Royce Trent 1000 and General Electric GEnx-1B.</p>
+            <p><strong>Facts:</strong> It is celebrated for its environmental efficiency and quieter engines. It is a widebody aircraft suitable for short-tomid range flights.</p>
+            <p><strong>The Boeing 787-8 was launched in 2011 as a wide body twin engine jet airliner designed with far better and more modern materials than previous planes. It is designed to fly from short to mid-haul routes. It can typically hold a capacity of 330 passengers. It is celebrated for its environmental efficiency, its quieter engines, and innovative design. It has Rolls-Royce Trent 1000 and General Electric GEnx-1B engines.</strong></p>
+            
+        </div>
+    </div>
+
+    <!-- Boeing 737 -->
+    <div class="aircraft-card">
+        <img src="img/737.jpg" alt="Boeing 737">
+        <div class="aircraft-info">
+            <h3>Boeing 737</h3>
+            <p><strong>Released:</strong> April 9, 1967</p>
+            <p><strong>Speed:</strong> 540 mph</p>
+            <p><strong>Capacity:</strong> 85–230 passengers</p>
+            <p><strong>Engines (Earlier Models):</strong> JT8D engines</p>
+            <p><strong>Engines (Latest Models):</strong> CFM LEAP-1B</p>
+            <p><strong>Facts:</strong> It is globally known as the best-selling plane globally due to its versatility and reliability. It is a Narrow body short-to-mid range aircraft.</p>
+            <p><strong>The Boeing 737-100 was released in 1967, which has now become one of the worlds most widely used aircraft currently. It is a narrow body plane, With a cruising speed of up to 540 mph, with a range of 7,730 miles. It is globally known as the best-selling plane globally due to its versatility and reliability. It has 2 JT8D engines, with the latest engines on the Boeing 737 MAXs are CFM LEAP-1B engines.</strong></p>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
