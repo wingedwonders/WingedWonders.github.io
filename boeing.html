@@ -1,148 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boeing Aircraft Showcase</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f8fb;
-        }
-        header {
-            background-color: #004080;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav 
-        {
-            background-color: #e6e6e6;
-            text-align: center;
-            padding: 1em;
-        }
-        nav a 
-        {
-            color: #003366;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .aircrafts {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .aircraft-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-            width: 300px;
-            transition: transform 0.2s;
-        }
-        .aircraft-card:hover {
-            transform: scale(1.05);
-        }
-        .aircraft-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .aircraft-info {
-            padding: 15px;
-        }
-        .aircraft-info h3 {
-            margin: 0 0 10px;
-        }
-        .aircraft-info p {
-            margin: 5px 0;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore the World's Greatest Aircraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('img/Night.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    header p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 20px auto 0;
+    }
+
+    .back-button a {
+      background-color: #ffcc00;
+      color: #003366;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #ffaa00;
+    }
+
+    section {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    section h2 {
+      font-size: 2em;
+      color: #ffcc00;
+      border-bottom: 3px solid #ffcc00;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .image-text-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .side-image {
+      width: 250px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    .aircraft-grid {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .aircraft-card {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .aircraft-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .aircraft-card h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .image-text-wrap {
+        flex-direction: column;
+        align-items: center;
+      }
+      .side-image {
+        width: 100%;
+        max-width: 300px;
+      }
+      .aircraft-grid {
+        justify-content: center;
+      }
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Boeing Aircraft Showcase</h1>
+  <h1>Explore the World's Greatest Aircraft</h1>
+  <p>From classic Boeings to sky giants like the A380 and An-225</p>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="boeing.html">Aircrafts</a>
-    <a href="Airlines.html">Airlines</a>
-    <a href="#">Safety</a>
-    <a href="#">Incidents</a>
-    <a href="#">Simulators</a>
-  </nav>
+<div class="back-button">
+  <a href="index.html">⬅ Back to Homepage</a>
+</div>
 
-<section class="aircrafts">
-    <!-- Boeing 747 -->
-    <div class="aircraft-card">
-        <img src="img/747.jpg" alt="Boeing 747">
-        <div class="aircraft-info">
-            <h3>Boeing 747</h3>
-            <p><strong>Released:</strong> February 9, 1969</p>
-            <p><strong>Speed:</strong> 540 mph</p>
-            <p><strong>Capacity:</strong> 416–660 passengers</p>
-            <p><strong>Engines (Earlier Models):</strong> JT9D, CF6, or RB211</p>
-            <p><strong>Engines (Latest Models):</strong> GEnx-2B67</p>
-            <p><strong>Facts</strong>  It is called Jumbo Jet or Queen of the Skies. It is a wideboody aircraft designed for mid-to-long range flights.</p>
-            <p><strong>The Boeing 747-200, also called the “Jumbo Jet” or “Queen of the skies”,  was invented on February 9th, 1969, which is now one of the most successful aircrafts, capable of mid and long-range travel. It can carry from 416-660 passengers depending on the model. The early 747 models had 4 JT9D, CF6, or RB211 engines. And the latest (747-8) has 4 GEnx-2B67 engines.</strong></p>
-        </div>
+<section>
+  <h2>✈️ Boeing Aircraft</h2>
+  <div class="image-text-wrap">
+    <img src="img/BoeingList.jpg" alt="Boeing Aircraft Comparison" class="side-image">
+    <div class="aircraft-grid">
+      <div class="aircraft-card"><h3>Boeing 707</h3><p>First Flight: 1957<br>Variants: 707-120, -320<br>Used By: Pan Am, TWA (retired)<br>The original jetliner that launched the Jet Age.</p></div>
+      <div class="aircraft-card"><h3>Boeing 727</h3><p>First Flight: 1963<br>Variants: 727-100, -200<br>Used By: FedEx, Eastern Airlines<br>Three-engine design ideal for short runways.</p></div>
+      <div class="aircraft-card"><h3>Boeing 737</h3><p>First Flight: 1967<br>Variants: 737-100 to MAX 10<br>Used By: Southwest, Ryanair, United<br>The best-selling jet ever.</p></div>
+      <div class="aircraft-card"><h3>Boeing 747</h3><p>First Flight: 1969<br>Variants: -100 to 747-8<br>Used By: Lufthansa, Korean Air<br>Iconic jumbo with upper deck and long range.</p></div>
+      <div class="aircraft-card"><h3>Boeing 757</h3><p>First Flight: 1982<br>Variants: -200, -300<br>Used By: Delta, Icelandair<br>Narrow-body with impressive range and climb.</p></div>
+      <div class="aircraft-card"><h3>Boeing 767</h3><p>First Flight: 1981<br>Variants: -200, -300, -400<br>Used By: United, ANA, FedEx<br>Passenger and cargo twin-aisle jet.</p></div>
+      <div class="aircraft-card"><h3>Boeing 777</h3><p>First Flight: 1994<br>Variants: -200, -300, 777X<br>Used By: Emirates, BA, Qatar<br>Largest twin-engine aircraft in the world.</p></div>
+      <div class="aircraft-card"><h3>Boeing 787</h3><p>First Flight: 2009<br>Variants: 787-8, -9, -10<br>Used By: ANA, Air Canada, Qatar<br>Composite fuselage, fuel-efficient, quiet.</p></div>
     </div>
-+
-    <!-- Boeing 777 -->
-    <div class="aircraft-card">
-        <img src="img/777.jpg" alt="Boeing 777">
-        <div class="aircraft-info">
-            <h3>Boeing 777</h3>
-            <p><strong>Released:</strong> June 12, 1994</p>
-            <p><strong>Speed:</strong> 560 mph</p>
-            <p><strong>Capacity:</strong> 314–396 passengers</p>
-            <p><strong>Engines:</strong> Three Pratt & Whitney JT8D turbofan </p>
-            <p><strong>Facts:</strong> The Boeing 777 is known for it's efficiency and comfort. It is a widebdy aircraft designed for long-range flights</p>
-            <p><strong>The Boeing 777-200 had finished development in 1995. It is a long-range widebody with twin engines. The 777 has an average cruising speed of around 560 mph and could carry up to 296 passengers. The Boeing 777 is known for its efficiency and passenger comfort. It has Pratt & Whitney PW4000, General Electric GE90, Rolls-Royce Trent 800, and GE9X Engines.</strong></p>
-
-        </div>
-    </div>
-
-    <!-- Boeing 787 Dreamliner -->
-    <div class="aircraft-card">
-        <img src="img/787.jpg" alt="Boeing 787">
-        <div class="aircraft-info">
-            <h3>Boeing 787</h3>
-            <p><strong>Released:</strong> December 15, 2009</p>
-            <p><strong>Speed:</strong> 567 mph</p>
-            <p><strong>Capacity:</strong> 242–330 passengers</p>
-            <p><strong>Engines:</strong> Rolls-Royce Trent 1000 and General Electric GEnx-1B.</p>
-            <p><strong>Facts:</strong> It is celebrated for its environmental efficiency and quieter engines. It is a widebody aircraft suitable for short-tomid range flights.</p>
-            <p><strong>The Boeing 787-8 was launched in 2011 as a wide body twin engine jet airliner designed with far better and more modern materials than previous planes. It is designed to fly from short to mid-haul routes. It can typically hold a capacity of 330 passengers. It is celebrated for its environmental efficiency, its quieter engines, and innovative design. It has Rolls-Royce Trent 1000 and General Electric GEnx-1B engines.</strong></p>
-            
-        </div>
-    </div>
-
-    <!-- Boeing 737 -->
-    <div class="aircraft-card">
-        <img src="img/737.jpg" alt="Boeing 737">
-        <div class="aircraft-info">
-            <h3>Boeing 737</h3>
-            <p><strong>Released:</strong> April 9, 1967</p>
-            <p><strong>Speed:</strong> 540 mph</p>
-            <p><strong>Capacity:</strong> 85–230 passengers</p>
-            <p><strong>Engines (Earlier Models):</strong> JT8D engines</p>
-            <p><strong>Engines (Latest Models):</strong> CFM LEAP-1B</p>
-            <p><strong>Facts:</strong> It is globally known as the best-selling plane globally due to its versatility and reliability. It is a Narrow body short-to-mid range aircraft.</p>
-            <p><strong>The Boeing 737-100 was released in 1967, which has now become one of the worlds most widely used aircraft currently. It is a narrow body plane, With a cruising speed of up to 540 mph, with a range of 7,730 miles. It is globally known as the best-selling plane globally due to its versatility and reliability. It has 2 JT8D engines, with the latest engines on the Boeing 737 MAXs are CFM LEAP-1B engines.</strong></p>
-        </div>
-    </div>
-
+  </div>
 </section>
+
+<section>
+  <h2>🛫 Airbus Aircraft</h2>
+  <div class="image-text-wrap">
+    <img src="img/AirbusList.jpg" alt="Airbus Aircraft Comparison" class="side-image">
+    <div class="aircraft-grid">
+      <div class="aircraft-card"><h3>Airbus A300</h3><p>First Flight: 1972<br>Variants: A300B2, B4<br>Used By: DHL, Iran Air<br>The first twin-engine wide-body jet.</p></div>
+      <div class="aircraft-card"><h3>Airbus A310</h3><p>First Flight: 1982<br>Variants: A310-200, -300<br>Used By: FedEx, Canadian Gov<br>Medium-haul variant of the A300.</p></div>
+      <div class="aircraft-card"><h3>Airbus A320 Family</h3><p>First Flight: 1987<br>Variants: A318 to A321 (ceo/neo)<br>Used By: easyJet, American<br>The world’s best-selling narrow-body family.</p></div>
+      <div class="aircraft-card"><h3>Airbus A330</h3><p>First Flight: 1992<br>Variants: -200, -300, neo<br>Used By: Delta, Turkish Airlines<br>Versatile long-haul twinjet.</p></div>
+      <div class="aircraft-card"><h3>Airbus A340</h3><p>First Flight: 1991<br>Variants: -200 to -600<br>Used By: Lufthansa, South African<br>Four-engine, ultra-long-haul classic.</p></div>
+      <div class="aircraft-card"><h3>Airbus A350</h3><p>First Flight: 2013<br>Variants: -900, -1000<br>Used By: Qatar, Singapore Airlines<br>Carbon-fiber design, next-gen efficiency.</p></div>
+      <div class="aircraft-card"><h3>Airbus A380</h3><p>First Flight: 2005<br>Variant: A380-800<br>Used By: Emirates, British Airways<br>The largest passenger plane ever built.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🚀 Other Notable Aircraft</h2>
+  <div class="aircraft-grid">
+    <div class="aircraft-card"><h3>Concorde</h3><p>First Flight: 1969<br>Capacity: 92–128 passengers<br>Used By: British Airways, Air France<br>The only supersonic passenger jet — NYC to London in 3.5 hrs.</p></div>
+    <div class="aircraft-card"><h3>Antonov An-225</h3><p>First Flight: 1988<br>Capacity: 640 tonnes cargo<br>Used By: Antonov Airlines<br>The world’s largest aircraft ever built.</p></div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Winged Wonders | Created by TotallyNotRandomStudios ✈️
+</footer>
 
 </body>
 </html>
+
